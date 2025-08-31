@@ -19,5 +19,5 @@ list avaible chips
 
 ./minipro-x86_64.AppImage -l | grep name_of_chip
 
-All Thanks to David Griffith for makinng this  software possible
+All Thanks to David Griffith for making this software possible
 https://gitlab.com/DavidGriffith/minipro/
