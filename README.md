@@ -1,6 +1,8 @@
 # TL866CS-AppImage
 <h2>Unofficial Build<h2/>
 
+<br>This is an appimage version from the open source software for tl866a/cs<br/>
+
   read the bios chip
 
 ./minipro-x86_64.AppImage -p W25Q64FV@SOIC8 -r lucas.rom -y
