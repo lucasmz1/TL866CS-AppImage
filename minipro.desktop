@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=minipro
+Exec=minipro
+Icon=icon
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=System;Utility;
