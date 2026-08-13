@@ -18,7 +18,9 @@ xvfb-run -a -- ./sharun l -p -v -e -s -k /usr/local/bin/minipro*
 cp -r /usr/lib/udev/*rules.d*/ ./shared/lib/
 mkdir -p ./shared/share
 cp -r /usr/local/share/*minipro*/ ./shared/share/
-ln -rs ./shared/share/ share/
+cd ./shared/
+ln -rs share/ ../share/
+cd ..
 ln sharun AppRun
 ./AppRun -g
 cd ..
