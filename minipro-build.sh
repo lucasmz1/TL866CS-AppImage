@@ -16,8 +16,9 @@ cp "${GITHUB_WORKSPACE}"/path-mapping.so "${GITHUB_WORKSPACE}"/AppDir/
 cd "${GITHUB_WORKSPACE}"/AppDir/
 xvfb-run -a -- ./sharun l -p -v -e -s -k /usr/local/bin/minipro* 
 cp -r /usr/lib/udev/*rules.d*/ ./shared/lib/
-mkdir etc
-cp -r /usr/local/share/*minipro*/ ./etc/ 
+mkdir -p ./shared/share
+cp -r /usr/local/share/*minipro*/ ./shared/share/
+ln -rs ./shared/share/ share/
 ln sharun AppRun
 ./AppRun -g
 cd ..
