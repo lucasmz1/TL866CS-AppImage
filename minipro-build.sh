@@ -12,7 +12,7 @@ cd "${GITHUB_WORKSPACE}"
 cp "${GITHUB_WORKSPACE}"/icon.png "${GITHUB_WORKSPACE}"/AppDir/
 cp "${GITHUB_WORKSPACE}"/minipro.desktop "${GITHUB_WORKSPACE}"/AppDir/
 cd "${GITHUB_WORKSPACE}"/AppDir/
-xvfb-run -d -- ./sharun l -p -v -e -s -k /usr/bin/scriba
+xvfb-run -d -- ./sharun l -p -v -e -s -k /usr/bin/minipro
 ln sharun AppRun
 ./AppRun -g
 cd ..
