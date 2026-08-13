@@ -11,8 +11,13 @@ sudo make install
 cd "${GITHUB_WORKSPACE}"
 cp "${GITHUB_WORKSPACE}"/icon.png "${GITHUB_WORKSPACE}"/AppDir/
 cp "${GITHUB_WORKSPACE}"/minipro.desktop "${GITHUB_WORKSPACE}"/AppDir/
+cp "${GITHUB_WORKSPACE}"/.env "${GITHUB_WORKSPACE}"/AppDir/
+cp "${GITHUB_WORKSPACE}"/path-mapping.so "${GITHUB_WORKSPACE}"/AppDir/
 cd "${GITHUB_WORKSPACE}"/AppDir/
-xvfb-run -a -- ./sharun l -p -v -e -s -k /usr/local/bin/minipro* /usr/local/share/minipro/* /usr/lib/udev/rules.d/*
+xvfb-run -a -- ./sharun l -p -v -e -s -k /usr/local/bin/minipro* 
+cp -r /usr/lib/udev/*rules.d*/ ./shared/lib/
+mkdir etc
+cp -r /usr/local/share/*minipro*/ ./etc/ 
 ln sharun AppRun
 ./AppRun -g
 cd ..
